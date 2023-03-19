@@ -1,0 +1,21 @@
+
+# VS
+.vs
+*.sln
+*.vcxproj
+*.vcxproj.filters
+*.vcxproj.user
+
+Makefile
+
+# VSCode
+.vscode
+
+# VSCode
+bin
+bin-int
+
+*log
+
+# TestSuites
+TestSuite_FMT.json
