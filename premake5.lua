@@ -10,6 +10,7 @@ workspace "ProjectsDev"
 include "PremakeUtilities/Utilities.lua"
 
 CurrentProjectDev = "ProjectCore"
+ProjectCoreTestsEnable = true
 
 -- Include directories relative to WKS
 Solution.Name  = "ProjectsDev"
