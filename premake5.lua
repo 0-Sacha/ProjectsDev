@@ -9,8 +9,9 @@ workspace "ProjectsDev"
 
 include "PremakeUtilities/Utilities.lua"
 
-CurrentProjectDev = "ProjectCore"
+CurrentProjectDev = "--"
 ProjectCoreTestsEnable = true
+LittleECSTestsEnable = true
 
 -- Include directories relative to WKS
 Solution.Name  = "ProjectsDev"
@@ -22,7 +23,7 @@ end
 if CurrentProjectDev == "ProjectCoreModules" then
 	Solution.Projects["ProjectCoreModules"] = "%{wks.location}/ProjectCoreModules/"
 end
-if CurrentProjectDev == "LittleECS" then
+if CurrentProjectDev == "LittleECS" or LittleECSTestsEnable == true then
 	Solution.Projects["LittleECS"] 			= "%{wks.location}/LittleECS/"
 end
 
@@ -37,7 +38,7 @@ end
 if CurrentProjectDev == "ProjectCoreModules" then
 	include "ProjectCoreModules"
 end
-if CurrentProjectDev == "LittleECS" then
+if CurrentProjectDev == "LittleECS" or LittleECSTestsEnable == true then
 	include "LittleECS"
 end
 
