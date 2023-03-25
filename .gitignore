@@ -19,3 +19,4 @@ bin-int
 
 # TestSuites
 TestSuite_FMT.json
+TestSuite_LITTLE_ECS.json
