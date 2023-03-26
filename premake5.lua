@@ -43,3 +43,5 @@ if CurrentProjectDev == "LittleECS" or LittleECSTestsEnable == true then
 end
 
 include "Sandbox"
+
+Solution.End()
