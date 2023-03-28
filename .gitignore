@@ -20,3 +20,4 @@ bin-int
 # TestSuites
 TestSuite_FMT.json
 TestSuite_LITTLE_ECS.json
+ADD_MANY_COMPONENT.json
