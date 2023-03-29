@@ -10,3 +10,6 @@
 [submodule "PremakeUtilities"]
 	path = PremakeUtilities
 	url = git@github-perso:0-Sacha/PremakeUtilities.git
+[submodule "LittleECS"]
+	path = LittleECS
+	url = git@github-perso:0-Sacha/LittleECS.git
