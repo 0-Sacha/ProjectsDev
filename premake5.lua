@@ -12,6 +12,7 @@ include "PremakeUtilities/Utilities.lua"
 CurrentProjectDev = "--"
 ProjectCoreTestsEnable = true
 LittleECSTestsEnable = true
+DISABLE_FILE_LOCATION = true
 
 -- Include directories relative to WKS
 Solution.Name  = "ProjectsDev"
