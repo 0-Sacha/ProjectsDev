@@ -1,15 +1,15 @@
 [submodule "ProjectCore"]
 	path = ProjectCore
-	url = git@github-perso:0-Sacha/ProjectCore.git
+	url = git@github.com:0-Sacha/ProjectCore.git
 [submodule "Spitfire"]
 	path = Spitfire
-	url = git@github-perso:0-Sacha/Spitfire.git
+	url = git@github.com:0-Sacha/Spitfire.git
 [submodule "ProjectCoreModules"]
 	path = ProjectCoreModules
-	url = git@github-perso:0-Sacha/ProjectCoreModules.git
+	url = git@github.com:0-Sacha/ProjectCoreModules.git
 [submodule "PremakeUtilities"]
 	path = PremakeUtilities
-	url = git@github-perso:0-Sacha/PremakeUtilities.git
+	url = git@github.com:0-Sacha/PremakeUtilities.git
 [submodule "LittleECS"]
 	path = LittleECS
-	url = git@github-perso:0-Sacha/LittleECS.git
+	url = git@github.com:0-Sacha/LittleECS.git
