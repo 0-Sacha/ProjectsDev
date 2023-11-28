@@ -13,3 +13,6 @@
 [submodule "LittleECS"]
 	path = LittleECS
 	url = git@github.com:0-Sacha/LittleECS.git
+[submodule "BazelUtilities"]
+	path = BazelUtilities
+	url = git@github.com:0-Sacha/BazelUtilities.git
