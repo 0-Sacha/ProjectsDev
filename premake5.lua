@@ -6,35 +6,32 @@ workspace "ProjectsDev"
 
 	flags "MultiProcessorCompile"
 
-
 include "PremakeUtilities/Utilities.lua"
 
-CurrentProjectDev = "--"
+CurrentProjectDev = "Spitfire"
 ProjectCoreTestsEnable = true
 LittleECSTestsEnable = true
 DISABLE_FILE_LOCATION = true
 
 -- Include directories relative to WKS
 Solution.Name  = "ProjectsDev"
-Solution.Projects["ProjectCore"] 			= "%{wks.location}/ProjectCore/"
+Solution.AddProject("ProjectCore", "%{wks.location}/ProjectCore/")
 
 if CurrentProjectDev == "Spitfire" or CurrentProjectDev == "ProjectCoreModules" then
-	Solution.Projects["Spirfire"] 			= "%{wks.location}/Spirfire/"
+	Solution.AddProject("Spitfire", "%{wks.location}/Spitfire/")
 end
 if CurrentProjectDev == "ProjectCoreModules" then
-	Solution.Projects["ProjectCoreModules"] = "%{wks.location}/ProjectCoreModules/"
+	Solution.AddProject("ProjectCoreModules", "%{wks.location}/ProjectCoreModules/")
 end
 if CurrentProjectDev == "LittleECS" or LittleECSTestsEnable == true then
-	Solution.Projects["LittleECS"] 			= "%{wks.location}/LittleECS/"
+	Solution.AddProject("LittleECS", "%{wks.location}/LittleECS/")
 end
 
-Solution.Projects["Sandbox"] 				= "%{wks.location}/Sandbox/"
-
+Solution.AddProject("Sandbox", "%{wks.location}/Sandbox/")
 
 include "ProjectCore"
-
 if CurrentProjectDev == "Spitfire" or CurrentProjectDev == "ProjectCoreModules" then
-	include "Spirfire"
+	include "Spitfire"
 end
 if CurrentProjectDev == "ProjectCoreModules" then
 	include "ProjectCoreModules"
@@ -42,7 +39,6 @@ end
 if CurrentProjectDev == "LittleECS" or LittleECSTestsEnable == true then
 	include "LittleECS"
 end
-
 include "Sandbox"
 
 Solution.End()

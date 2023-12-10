@@ -1,6 +1,18 @@
 
+Solution.Projects["Sandbox"].ProjectDependencies = { "ProjectCore" }
+
+if CurrentProjectDev == "Spitfire" or CurrentProjectDev == "ProjectCoreModules" then
+	table.insert(Solution.Projects["Sandbox"].ProjectDependencies, "Spitfire")
+end
+if CurrentProjectDev == "ProjectCoreModules" then
+	table.insert(Solution.Projects["Sandbox"].ProjectDependencies, "ProjectCoreModules")
+end
+if CurrentProjectDev == "LittleECS" then
+	table.insert(Solution.Projects["Sandbox"].ProjectDependencies, "LittleECS")
+end
+
 project "Sandbox"
-	kind "ConsoleApp"
+	kind 		(Solution.Projects["Sandbox"].Type)
 	language "C++"
 	cppdialect "C++20"
 
@@ -14,15 +26,4 @@ project "Sandbox"
 		"src/**.cpp",
 	}
 	
-	Solution.IncludeAndLinkProject("ProjectCore")
-
-	if CurrentProjectDev == "Spitfire" or CurrentProjectDev == "ProjectCoreModules" then
-		Solution.IncludeAndLinkProject("Spirfire")
-	end
-	if CurrentProjectDev == "ProjectCoreModules" then
-		Solution.IncludeAndLinkProject("ProjectCoreModules")
-	end
-	if CurrentProjectDev == "LittleECS" then
-		Solution.IncludeAndLinkProject("LittleECS")
-	end
-	
+	Solution.Project("Sandbox")
