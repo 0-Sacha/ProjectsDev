@@ -27,3 +27,12 @@ project "Sandbox"
 	}
 	
 	Solution.Project("Sandbox")
+
+
+SandboxLaunch = {}
+SandboxLaunch.Project = "Sandbox"
+SandboxLaunch.BuildCfg = "Debug"
+SandboxLaunch.Platform = "x64"
+SandboxLaunch.PreLaunchTask = "DEBUGx64 build"
+SandboxLaunch.Args = { "test.json" }
+Solution.Launch["Sandbox"] = SandboxLaunch
