@@ -11,10 +11,17 @@ Makefile
 # VSCode
 .vscode
 
-# VSCode
+# Bin
 bin
 bin-int
 
+# Bazel
+bazel-bin
+bazel-out
+bazel-projectsdev
+bazel-testlogs
+
+# Logs
 *log
 
 # TestSuites
