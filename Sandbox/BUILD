@@ -1,8 +1,9 @@
-load("@rules_cc//cc:defs.bzl", "cc_library", "cc_binary")
+""
 
-cc_binary(
-    name = "Sandbox",
-    srcs = [ "src/Sandbox/Sandbox.cpp" ],
-    deps = [],
-    visibility = ["//visibility:public"],
+load("//BazelUtilities/solutions:solutions.bzl", "solution_project_build")
+load(":project.bzl", "info_Sandbox")
+
+solution_project_build(
+    info = info_Sandbox,
+    srcs = [ "src/Sandbox/Sandbox.cpp" ]
 )
