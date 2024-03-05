@@ -9,4 +9,5 @@ int main(int argc, char** argv)
 {
 	std::cout << "Hello" << std::endl;
 	ProjectCore::LoggerManager::GetLoggerCore().Info("Sandbox Launch");
+	auto res = ProjectCore::JSON::JsonFactory::FromPath("TestSuite_FMT.json");
 }
